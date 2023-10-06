@@ -1,0 +1,52 @@
+
+<img class="logo" [src]="cheminImage"/>
+<div class="nav-bar">
+  <h3 style="margin: 2%">Acceuil</h3>
+  <h3 style="margin: 2%">Recherche</h3>
+</div>
+<div class="line"></div>
+<p class="title">Ma super page de recherhce </p>
+<div class="search">
+<input
+type="search"
+[(ngModel)]="lang"
+placeholder="Rechercher par la langue"
+class="input-search"
+/>
+<button class="button-search" (click)="getContruniesBylang()">
+  <span class="material-symbols-outlined">
+    search
+    </span>
+</button>
+</div>
+<div  class="card-countries">
+    <div *ngFor="let p of tempCountries" class="card-country">
+      <div  class="border-country">
+        <img class="flag" [src]="p.flags.png" alt="Card image cap" />
+        <div style="text-align: left;" >
+          <h4 style="color: red;" >{{ p.region }}</h4>
+          <h4>{{ p.name.common }}</h4>
+          <p >Liste des langues parlées:</p>
+          <div style="display: flex; flex-direction: row">
+          <div *ngFor="let l of p.languages | keyvalue">
+           
+              {{ l.value  }} ,
+            </div>
+          </div>
+          <div>
+        <div style="margin-left: 30%;margin-top: 5%;">
+          <a [href]="p.maps.googleMaps" 
+            >Voir sur la carte map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="justify-content: center; display: flex; width: 100%">
+    <button
+      (click)="showMore()"
+      class="btn-show"
+    >
+      voir plus
+    </button>
+  </div> 
