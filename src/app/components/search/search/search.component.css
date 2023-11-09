@@ -1,0 +1,9 @@
+.search{
+    justify-content: center; display: flex; width: 100%; margin-bottom: 50;
+}
+.input-search{
+    width: 50%; border-radius: 15px;border-color: #80808014;
+}
+.button-search{
+    cursor:  pointer; border: none;
+}

@@ -1,24 +1,6 @@
-.logo {
-    width: 10%; float: letf;
-}
-.nav-bar{
-   width: 25%; display: flex; flex-direction: row; margin-left: 75%;
-}
-.line {
-    width: 100%; height: 2px; background-color: brown;margin-top: 5%;
-}
-.title {
-    justify-content: center;display: flex;font-size: 50px;font-family: system-ui;
-}
-.search{
-    justify-content: center; display: flex; width: 100%; margin-bottom: 50;
-}
-.input-search{
-    width: 50%; border-radius: 15px;border-color: #80808014;
-}
-.button-search{
-    cursor:  pointer; border: none;
-}
+
+
+
 .card-countries {
     margin-top: 2%;display: flex;flex-wrap: wrap;margin-left: 180px
 }
